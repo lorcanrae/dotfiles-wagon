@@ -82,3 +82,18 @@ export GOOGLE_APPLICATION_CREDENTIALS=/home/lscr/.gcp_keys/wagon-data-bootcamp-3
 
 # Created by `pipx` on 2023-04-06 08:39:48
 export PATH="$PATH:/home/lscr/.local/bin"
+
+# Remove duplicates from $PATH - alternatively use typeset -U path
+if [ -n "$PATH" ]; then
+    old_PATH=$PATH:; PATH=
+    while [ -n "$old_PATH" ]; do
+        x=${old_PATH%%:*}       # the first remaining entry
+        case $PATH: in
+            *:"$x":*) ;;         # if it's already in $PATH, skip it
+            *) PATH=$PATH$x:;;   # if not, add it to $PATH
+        esac
+        old_PATH=${old_PATH#*:}  # remove the first entry from $old_PATH
+    done
+    PATH=${PATH%:}             # remove the trailing colon
+    unset old_PATH x           # clean up temporary variables
+fi
