@@ -54,7 +54,7 @@
 [init]
 	defaultBranch = main
 [user]
-	email = lorcanrae@gmail.com
+	email = 77328552+lorcanrae@users.noreply.github.com
 	name = Lorcan Rae
 [filter "lfs"]
 	required = true
