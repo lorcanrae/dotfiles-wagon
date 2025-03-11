@@ -55,7 +55,7 @@
 	defaultBranch = main
 [user]
 	email = 77328552+lorcanrae@users.noreply.github.com
-	name = LR
+	name = Lorcan Rae
 [filter "lfs"]
 	required = true
 	clean = git-lfs clean -- %f
