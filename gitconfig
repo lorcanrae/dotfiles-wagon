@@ -25,7 +25,6 @@
 
   # Clean merged branches
   sweep = !git branch --merged main | grep -v 'main$' | xargs git branch -d && git remote prune origin
-  sweepm = !git branch --merged master | grep -v 'master$' | xargs git branch -d && git remote prune origin
 
   # http://www.jukie.net/bart/blog/pimping-out-git-log
   lg = log --graph --all --pretty=format:'%Cred%h%Creset - %s %Cgreen(%cr) %C(bold blue)%an%Creset %C(yellow)%d%Creset'
@@ -43,7 +42,7 @@
   autocorrect = 1
 
 [push]
-	default = simple
+  default = simple
 
 [branch "master"]
   mergeoptions = --no-edit
@@ -52,10 +51,12 @@
   rebase = false
 
 [init]
-	defaultBranch = main
+    defaultBranch = main
+
 [user]
-	email = lorcanrae@gmail.com
+	email = 77328552+lorcanrae@users.noreply.github.com
 	name = Lorcan Rae
+
 [filter "lfs"]
 	required = true
 	clean = git-lfs clean -- %f
