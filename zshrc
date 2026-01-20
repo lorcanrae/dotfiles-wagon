@@ -9,7 +9,7 @@ ZSH_THEME="robbyrussell"
 [[ -f "$HOME/.zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh" ]] && source "$HOME/.zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh"
 
 # Useful oh-my-zsh plugins for Le Wagon bootcamps
-plugins=(git gitfast last-working-dir common-aliases zsh-syntax-highlighting history-substring-search pyenv ssh-agent direnv sudo gcloud)
+plugins=(git gitfast last-working-dir common-aliases zsh-syntax-highlighting history-substring-search pyenv ssh-agent direnv gcloud)
 
 # Disable warning about insecure completion-dependent directories
 ZSH_DISABLE_COMPFIX=true
